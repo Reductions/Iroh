@@ -1,0 +1,15 @@
+source 'https://rubygems.org'
+ruby '2.3.2'
+
+gem 'activesupport'
+gem 'builder'
+gem 'dotenv'
+gem 'erubis'
+gem 'i18n'
+gem 'json'
+gem 'rake'
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'sequel'
+gem 'sinatra-sequel'
+gem "sqlite3"
