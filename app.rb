@@ -7,13 +7,12 @@ require 'active_support/core_ext'
 
 class  Iroh < Sinatra::Application
   configure do
-    set :erb, escape_html: true
+    set :erb, layout: :layout
 
     set :sessions,
         httponly: true,
         secure: production?,
-        expire_after: 5.years,
-        secret: ENV['SESSION_SECRET']
+        expire_after: 5.years
   end
 
   configure :production, :development do

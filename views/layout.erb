@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ihro</title>
+  </head>
+  <body>
+    <%if signed_in? %>
+      Loged in as <b><%= current_user %></b>
+      <a href="/logout"><button>Logout</button></a>
+      <a href="/tournaments"><button>Tournaments</button></a>
+    <% else %>
+      <a href="/signin"><button>Sign In</button></a>
+      <a href="/signup"><button>Sign Up</button></a>
+    <% end %>
+    <p>
+      <% if block_given? %>
+      <%= yield %>
+      <% end %>
+    </p>
+  </body>
+</html>
