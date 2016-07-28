@@ -5,7 +5,7 @@ require 'active_support'
 require 'active_support/core_ext'
 
 
-class App < Sinatra::Application
+class  Iroh < Sinatra::Application
   configure do
     set :erb, escape_html: true
 
@@ -18,14 +18,12 @@ class App < Sinatra::Application
 
   configure :production, :development do
     DB = Sequel.connect('sqlite://db/iroh.db')
-    DB.loggers << Logger.new(STDOUT)
   end
-
 
   configure :development do
     register Sinatra::Reloader
+    DB.loggers << Logger.new(STDOUT)
   end
-
 end
 
 require_relative 'models/init'
