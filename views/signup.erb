@@ -1,0 +1,13 @@
+<form action="/signup" method="POST">
+   <input type="text"  placeholder="Email" name="email" required>
+   <br/>
+   <input type="password" placeholder="Password" name="password" required>
+   <br/>
+   <input type="password" placeholder="Confirm Password" name="confirm" required>
+   <br/>
+   <% if @error %>
+      <%= @error %>
+      <br/>
+   <% end %>
+   <input type="submit">
+</form>

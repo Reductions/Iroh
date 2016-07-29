@@ -6,7 +6,7 @@
   <body>
     <%if signed_in? %>
       Loged in as <b><%= current_user %></b>
-      <a href="/logout"><button>Logout</button></a>
+      <a href="/signout"><button>Sign Out</button></a>
       <a href="/tournaments"><button>Tournaments</button></a>
     <% else %>
       <a href="/signin"><button>Sign In</button></a>
